@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/myStyle"
+        android:text="Enter Message Below (lower case only):" />
+
+    <EditText
+        android:inputType="text"
+        android:id="@+id/messageEditText"
+        android:layout_width="match_parent"
+        style="@style/myStyle"
+        android:layout_height="wrap_content"
+        android:hint="Message" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/myStyle"
+        android:text="Select Private Key:" />
+
+    <SeekBar
+        android:id="@+id/privateKeySeekBar"
+        android:progress="32"
+        android:max="100"
+        style="@style/myStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/privateKeyTextView"
+        android:layout_width="match_parent"
+        style="@style/myStyle"
+        android:layout_height="wrap_content"
+        android:text="Private Key: 32"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/myStyle"
+        android:text="Encrypt or Decrypt?" />
+
+    <RadioGroup
+        android:id="@+id/encryptDecryptradioGroup"
+        android:layout_width="wrap_content"
+        style="@style/myStyle"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/encryptRadioButton"
+            android:layout_width="wrap_content"
+            style="@style/myStyle"
+            android:checked="true"
+            android:layout_height="wrap_content"
+            android:text="Encrypt" />
+
+        <RadioButton
+            android:id="@+id/decryptRadioButton"
+            android:layout_width="wrap_content"
+            style="@style/myStyle"
+            android:layout_height="wrap_content"
+            android:text="Decrypt" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/submit"
+        style="@style/myStyle"
+        android:onClick="submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Encrypt"/>
+
+    <TextView
+        android:id="@+id/outputTextView"
+        style="@style/myStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</LinearLayout>
